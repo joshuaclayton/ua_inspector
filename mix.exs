@@ -1,4 +1,4 @@
-defmodule UAInspector.Mixfile do
+defmodule UaInspector.Mixfile do
   use Mix.Project
 
   @url_docs "http://hexdocs.pm/ua_inspector"
@@ -6,7 +6,7 @@ defmodule UAInspector.Mixfile do
 
   def project do
     [ app:           :ua_inspector,
-      name:          "UAInspector",
+      name:          "UaInspector",
       description:   "User agent parser library",
       package:       package,
       version:       "0.10.0-dev",
@@ -18,7 +18,7 @@ defmodule UAInspector.Mixfile do
 
   def application do
     [ applications: [ :yamerl ],
-      mod:          { UAInspector, [] } ]
+      mod:          { UaInspector, [] } ]
   end
 
   def deps(:docs) do

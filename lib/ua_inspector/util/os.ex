@@ -1,9 +1,9 @@
-defmodule UAInspector.Util.OS do
+defmodule UaInspector.Util.OS do
   @moduledoc """
   Utility methods for operating system lookups.
   """
 
-  alias UAInspector.ShortCodeMap
+  alias UaInspector.ShortCodeMap
 
   @desktopFamilies [
     "AmigaOS",

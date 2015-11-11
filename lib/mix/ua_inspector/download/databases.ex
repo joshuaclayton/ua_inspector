@@ -1,4 +1,4 @@
-defmodule Mix.UAInspector.Download.Databases do
+defmodule Mix.UaInspector.Download.Databases do
   @moduledoc """
   Fetches parser databases from the
   [piwik/device-detector](https://github.com/piwik/device-detector)
@@ -9,16 +9,16 @@ defmodule Mix.UAInspector.Download.Databases do
   `mix ua_inspector.download.databases`
   """
 
-  alias Mix.UAInspector.Download
+  alias Mix.UaInspector.Download
 
-  alias UAInspector.Config
-  alias UAInspector.Database
+  alias UaInspector.Config
+  alias UaInspector.Database
 
 
   @behaviour Mix.Task
 
   def run(args) do
-    Mix.shell.info "UAInspector Database Download"
+    Mix.shell.info "UaInspector Database Download"
 
     case Config.database_path do
       nil -> Download.exit_unconfigured()

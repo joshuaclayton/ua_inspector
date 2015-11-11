@@ -1,4 +1,4 @@
-defmodule UAInspector.Result.Device do
+defmodule UaInspector.Result.Device do
   @moduledoc """
   Device result struct.
   """

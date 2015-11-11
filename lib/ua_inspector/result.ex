@@ -1,9 +1,9 @@
-defmodule UAInspector.Result do
+defmodule UaInspector.Result do
   @moduledoc """
   Result struct.
   """
 
-  alias UAInspector.Result
+  alias UaInspector.Result
 
   defstruct [
     user_agent: "",

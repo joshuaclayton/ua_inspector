@@ -1,9 +1,9 @@
-defmodule Mix.UAInspector.Verify.Cleanup do
+defmodule Mix.UaInspector.Verify.Cleanup do
   @moduledoc """
   Cleans up testcases.
   """
 
-  alias UAInspector.ShortCodeMap.DeviceBrands
+  alias UaInspector.ShortCodeMap.DeviceBrands
 
   @doc """
   Cleans up a test case.

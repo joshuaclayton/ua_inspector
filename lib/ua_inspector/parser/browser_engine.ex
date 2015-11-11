@@ -1,11 +1,11 @@
-defmodule UAInspector.Parser.BrowserEngine do
+defmodule UaInspector.Parser.BrowserEngine do
   @moduledoc """
-  UAInspector browser engine information parser.
+  UaInspector browser engine information parser.
   """
 
-  use UAInspector.Parser
+  use UaInspector.Parser
 
-  alias UAInspector.Database.BrowserEngines
+  alias UaInspector.Database.BrowserEngines
 
   def parse(ua), do: parse(ua, BrowserEngines.list)
 

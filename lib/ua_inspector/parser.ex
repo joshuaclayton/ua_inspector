@@ -1,12 +1,12 @@
-defmodule UAInspector.Parser do
+defmodule UaInspector.Parser do
   @moduledoc """
   Parser module to call individual data parsers and aggregate the results.
   """
 
-  alias UAInspector.Parser
-  alias UAInspector.Result
-  alias UAInspector.ShortCodeMap
-  alias UAInspector.Util
+  alias UaInspector.Parser
+  alias UaInspector.Result
+  alias UaInspector.ShortCodeMap
+  alias UaInspector.Util
 
   defmacro __using__(_opts) do
     quote do

@@ -1,7 +1,7 @@
 if Version.match?(System.version, ">= 1.0.3") do
   #
   # Elixir 1.0.3 and up requires mixed case module namings.
-  # The "double uppercase letter" of "UAInspector" violates
+  # The "double uppercase letter" of "UaInspector" violates
   # this rule. This fake task acts as a workaround.
   #
   defmodule Mix.Tasks.UaInspector.Download.Databases do
@@ -10,7 +10,7 @@ if Version.match?(System.version, ">= 1.0.3") do
 
     use Mix.Task
 
-    defdelegate run(args), to: Mix.UAInspector.Download.Databases
+    defdelegate run(args), to: Mix.UaInspector.Download.Databases
   end
 else
   #
@@ -23,6 +23,6 @@ else
 
     use Mix.Task
 
-    defdelegate run(args), to: Mix.UAInspector.Download.Databases
+    defdelegate run(args), to: Mix.UaInspector.Download.Databases
   end
 end

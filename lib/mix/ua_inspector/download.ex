@@ -1,9 +1,9 @@
-defmodule Mix.UAInspector.Download do
+defmodule Mix.UaInspector.Download do
   @moduledoc """
   Utility module to support download tasks.
   """
 
-  alias UAInspector.Config
+  alias UaInspector.Config
 
   @doc """
   Prints an error because of missing configuration values.

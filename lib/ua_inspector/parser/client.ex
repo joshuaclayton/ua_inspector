@@ -1,14 +1,14 @@
-defmodule UAInspector.Parser.Client do
+defmodule UaInspector.Parser.Client do
   @moduledoc """
-  UAInspector client information parser.
+  UaInspector client information parser.
   """
 
-  use UAInspector.Parser
+  use UaInspector.Parser
 
-  alias UAInspector.Database.Clients
-  alias UAInspector.Parser.BrowserEngine
-  alias UAInspector.Result
-  alias UAInspector.Util
+  alias UaInspector.Database.Clients
+  alias UaInspector.Parser.BrowserEngine
+  alias UaInspector.Result
+  alias UaInspector.Util
 
   def parse(ua), do: parse(ua, Clients.list)
 

@@ -1,4 +1,4 @@
-defmodule UAInspector.ShortCodeMap do
+defmodule UaInspector.ShortCodeMap do
   @moduledoc """
   Basic short code map module providing minimal functions.
   """

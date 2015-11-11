@@ -1,9 +1,9 @@
-defmodule Mix.UAInspector.Verify do
+defmodule Mix.UaInspector.Verify do
   @moduledoc """
-  Verifies UAInspector results.
+  Verifies UaInspector results.
   """
 
-  alias Mix.UAInspector.Verify
+  alias Mix.UaInspector.Verify
 
 
   @behaviour Mix.Task
@@ -37,8 +37,8 @@ defmodule Mix.UAInspector.Verify do
 
   defp maybe_download([ quick: true ]), do: :ok
   defp maybe_download(_)                do
-    :ok = Mix.UAInspector.Download.Databases.run(["--force"])
-    :ok = Mix.UAInspector.Download.ShortCodeMaps.run(["--force"])
+    :ok = Mix.UaInspector.Download.Databases.run(["--force"])
+    :ok = Mix.UaInspector.Download.ShortCodeMaps.run(["--force"])
     :ok = Verify.Fixtures.download()
 
     Mix.shell.info "=== Skip downloads using '--quick' ==="
@@ -62,7 +62,7 @@ defmodule Mix.UAInspector.Verify do
   defp verify([]),                      do: nil
   defp verify([ testcase | testcases ]) do
     testcase = testcase |> parse() |> Verify.Cleanup.cleanup()
-    result   = testcase[:user_agent] |> UAInspector.parse()
+    result   = testcase[:user_agent] |> UaInspector.parse()
 
     case compare(testcase, result) do
       true  -> verify(testcases)

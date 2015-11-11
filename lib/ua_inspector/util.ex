@@ -1,4 +1,4 @@
-defmodule UAInspector.Util do
+defmodule UaInspector.Util do
   @moduledoc """
   Utility methods.
   """

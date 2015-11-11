@@ -1,7 +1,7 @@
-defmodule UAInspector.ParserTest do
+defmodule UaInspector.ParserTest do
   use ExUnit.Case, async: true
 
-  alias UAInspector.Result
+  alias UaInspector.Result
 
   test "handle incomplete yaml definitions" do
     agent  = "Incomplete YAML entry without model"
@@ -10,27 +10,27 @@ defmodule UAInspector.ParserTest do
       device:     %Result.Device{ brand: "Incomplete" }
     }
 
-    assert parsed == UAInspector.parse(agent)
+    assert parsed == UaInspector.parse(agent)
   end
 
   test "parse empty" do
     agent  = ""
     parsed = %Result{ user_agent: agent }
 
-    assert parsed == UAInspector.parse(agent)
+    assert parsed == UaInspector.parse(agent)
   end
 
   test "parse unknown" do
     agent  = "some unknown user agent"
     parsed = %Result{ user_agent: agent }
 
-    assert parsed == UAInspector.parse(agent)
+    assert parsed == UaInspector.parse(agent)
   end
 
 
   test "bot?" do
-    assert UAInspector.bot?("generic crawler agent")
-    refute UAInspector.bot?("regular user agent")
+    assert UaInspector.bot?("generic crawler agent")
+    refute UaInspector.bot?("regular user agent")
   end
 
   test "parse" do
@@ -42,13 +42,13 @@ defmodule UAInspector.ParserTest do
       os:         %Result.OS{ name: "iOS", version: "7.0.4" }
     }
 
-    assert parsed == UAInspector.parse(agent)
+    assert parsed == UaInspector.parse(agent)
   end
 
   test "parse_client" do
     agent  = "generic crawler agentx"
     parsed = %Result{ user_agent: agent }
 
-    assert parsed == UAInspector.parse_client(agent)
+    assert parsed == UaInspector.parse_client(agent)
   end
 end

@@ -1,12 +1,12 @@
-defmodule UAInspector.Pool do
+defmodule UaInspector.Pool do
   @moduledoc """
-  Connects the plain UAInspector interface with the underlying pool.
+  Connects the plain UaInspector interface with the underlying pool.
   """
 
   @pool_name    :ua_inspector_pool
   @pool_options [
     name:          { :local, @pool_name },
-    worker_module: UAInspector.Server,
+    worker_module: UaInspector.Server,
     size:          5,
     max_overflow:  10
   ]

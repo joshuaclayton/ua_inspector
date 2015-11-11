@@ -1,12 +1,12 @@
-defmodule UAInspector.Parser.Bot do
+defmodule UaInspector.Parser.Bot do
   @moduledoc """
-  UAInspector bot information parser.
+  UaInspector bot information parser.
   """
 
-  use UAInspector.Parser
+  use UaInspector.Parser
 
-  alias UAInspector.Database.Bots
-  alias UAInspector.Result
+  alias UaInspector.Database.Bots
+  alias UaInspector.Result
 
   def parse(ua), do: parse(ua, Bots.list)
 

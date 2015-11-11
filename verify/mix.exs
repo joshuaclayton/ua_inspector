@@ -1,4 +1,4 @@
-defmodule UAInspector.Verification.Mixfile do
+defmodule UaInspector.Verification.Mixfile do
   use Mix.Project
 
   def project do

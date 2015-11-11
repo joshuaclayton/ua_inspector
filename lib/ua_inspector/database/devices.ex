@@ -1,11 +1,11 @@
-defmodule UAInspector.Database.Devices do
+defmodule UaInspector.Database.Devices do
   @moduledoc """
-  UAInspector device information database.
+  UaInspector device information database.
   """
 
-  use UAInspector.Database
+  use UaInspector.Database
 
-  alias UAInspector.Util
+  alias UaInspector.Util
 
   # files ordered according to
   # https://github.com/piwik/device-detector/blob/master/DeviceDetector.php
@@ -24,7 +24,7 @@ defmodule UAInspector.Database.Devices do
   @ets_table   :ua_inspector_database_devices
 
   def store_entry({ brand, data }, type) do
-    counter = UAInspector.Databases.update_counter(@ets_counter)
+    counter = UaInspector.Databases.update_counter(@ets_counter)
     data    = Enum.into(data, %{})
     models  = parse_models(data)
 

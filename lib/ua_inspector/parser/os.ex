@@ -1,13 +1,13 @@
-defmodule UAInspector.Parser.OS do
+defmodule UaInspector.Parser.OS do
   @moduledoc """
-  UAInspector operating system information parser.
+  UaInspector operating system information parser.
   """
 
-  use UAInspector.Parser
+  use UaInspector.Parser
 
-  alias UAInspector.Database.OSs
-  alias UAInspector.Result
-  alias UAInspector.Util
+  alias UaInspector.Database.OSs
+  alias UaInspector.Result
+  alias UaInspector.Util
 
   def parse(ua), do: parse(ua, OSs.list)
 

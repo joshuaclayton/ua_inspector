@@ -1,4 +1,4 @@
-defmodule UAInspector.Result.Bot do
+defmodule UaInspector.Result.Bot do
   @moduledoc """
   Bot result struct.
   """
@@ -8,6 +8,6 @@ defmodule UAInspector.Result.Bot do
     name:       :unknown,
     category:   :unknown,
     url:        :unknown,
-    producer:   %UAInspector.Result.BotProducer{}
+    producer:   %UaInspector.Result.BotProducer{}
   ]
 end

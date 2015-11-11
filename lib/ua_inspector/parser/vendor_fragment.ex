@@ -1,11 +1,11 @@
-defmodule UAInspector.Parser.VendorFragment do
+defmodule UaInspector.Parser.VendorFragment do
   @moduledoc """
-  UAInspector vendor fragment information parser.
+  UaInspector vendor fragment information parser.
   """
 
-  use UAInspector.Parser
+  use UaInspector.Parser
 
-  alias UAInspector.Database.VendorFragments
+  alias UaInspector.Database.VendorFragments
 
   def parse(ua), do: parse(ua, VendorFragments.list)
 

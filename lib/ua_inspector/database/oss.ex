@@ -1,11 +1,11 @@
-defmodule UAInspector.Database.OSs do
+defmodule UaInspector.Database.OSs do
   @moduledoc """
-  UAInspector operating system information database.
+  UaInspector operating system information database.
   """
 
-  use UAInspector.Database
+  use UaInspector.Database
 
-  alias UAInspector.Util
+  alias UaInspector.Util
 
   @source_base_url "https://raw.githubusercontent.com/piwik/device-detector/master/regexes"
   @sources         [{ "", "oss.yml", "#{ @source_base_url }/oss.yml" }]
@@ -14,7 +14,7 @@ defmodule UAInspector.Database.OSs do
   @ets_table   :ua_inspector_database_oss
 
   def store_entry(data, _type) do
-    counter = UAInspector.Databases.update_counter(@ets_counter)
+    counter = UaInspector.Databases.update_counter(@ets_counter)
     data    = Enum.into(data, %{})
 
     entry = %{

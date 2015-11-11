@@ -1,5 +1,5 @@
-defmodule UAInspector.Util.OSTest do
+defmodule UaInspector.Util.OSTest do
   use ExUnit.Case, async: true
 
-  doctest UAInspector.Util.OS, import: true
+  doctest UaInspector.Util.OS, import: true
 end

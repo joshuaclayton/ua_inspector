@@ -1,11 +1,11 @@
-defmodule UAInspector.ShortCodeMaps do
+defmodule UaInspector.ShortCodeMaps do
   @moduledoc """
   Module to coordinate individual parser short code maps.
   """
 
   use GenServer
 
-  alias UAInspector.ShortCodeMap
+  alias UaInspector.ShortCodeMap
 
 
   # GenServer lifecycle

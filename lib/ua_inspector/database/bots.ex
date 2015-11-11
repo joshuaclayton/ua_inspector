@@ -1,11 +1,11 @@
-defmodule UAInspector.Database.Bots do
+defmodule UaInspector.Database.Bots do
   @moduledoc """
-  UAInspector bot information database.
+  UaInspector bot information database.
   """
 
-  use UAInspector.Database
+  use UaInspector.Database
 
-  alias UAInspector.Util
+  alias UaInspector.Util
 
   @source_base_url "https://raw.githubusercontent.com/piwik/device-detector/master/regexes"
   @sources         [{ "", "bots.yml", "#{ @source_base_url }/bots.yml" }]
@@ -14,7 +14,7 @@ defmodule UAInspector.Database.Bots do
   @ets_table   :ua_inspector_database_bots
 
   def store_entry(data, _type) do
-    counter = UAInspector.Databases.update_counter(@ets_counter)
+    counter = UaInspector.Databases.update_counter(@ets_counter)
     data    = Enum.into(data, %{})
 
     entry = %{

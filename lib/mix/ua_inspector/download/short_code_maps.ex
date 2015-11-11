@@ -1,4 +1,4 @@
-defmodule Mix.UAInspector.Download.ShortCodeMaps do
+defmodule Mix.UaInspector.Download.ShortCodeMaps do
   @moduledoc """
   Fetches short code map listings from the
   [piwik/device-detector](https://github.com/piwik/device-detector)
@@ -10,17 +10,17 @@ defmodule Mix.UAInspector.Download.ShortCodeMaps do
   `mix ua_inspector.download.short_code_maps`
   """
 
-  alias Mix.UAInspector.Download
-  alias Mix.UAInspector.ShortCodeMap, as: Util
+  alias Mix.UaInspector.Download
+  alias Mix.UaInspector.ShortCodeMap, as: Util
 
-  alias UAInspector.Config
-  alias UAInspector.ShortCodeMap
+  alias UaInspector.Config
+  alias UaInspector.ShortCodeMap
 
 
   @behaviour Mix.Task
 
   def run(args) do
-    Mix.shell.info "UAInspector Short Code Map Download"
+    Mix.shell.info "UaInspector Short Code Map Download"
 
     case Config.database_path do
       nil -> Download.exit_unconfigured()

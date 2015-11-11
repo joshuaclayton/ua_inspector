@@ -1,4 +1,4 @@
-defmodule UAInspector.Result.OS do
+defmodule UaInspector.Result.OS do
   @moduledoc """
   Operating system result struct.
   """

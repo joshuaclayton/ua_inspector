@@ -1,11 +1,11 @@
-defmodule UAInspector.Databases do
+defmodule UaInspector.Databases do
   @moduledoc """
   Module to coordinate individual parser databases.
   """
 
   use GenServer
 
-  alias UAInspector.Database
+  alias UaInspector.Database
 
   @ets_table :ua_inspector_databases
 

@@ -1,4 +1,4 @@
-defmodule Mix.UAInspector.ShortCodeMap do
+defmodule Mix.UaInspector.ShortCodeMap do
   @moduledoc """
   Utility module to extract short code maps from source files.
   """

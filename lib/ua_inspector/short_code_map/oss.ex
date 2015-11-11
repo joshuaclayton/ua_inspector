@@ -1,9 +1,9 @@
-defmodule UAInspector.ShortCodeMap.OSs do
+defmodule UaInspector.ShortCodeMap.OSs do
   @moduledoc """
   Operating System Short Code Map.
   """
 
-  use UAInspector.ShortCodeMap
+  use UaInspector.ShortCodeMap
 
   @remote_base "https://raw.githubusercontent.com/piwik/device-detector/master"
 

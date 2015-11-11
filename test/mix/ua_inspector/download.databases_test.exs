@@ -1,4 +1,4 @@
-defmodule Mix.UAInspector.Download.DatabasesTest do
+defmodule Mix.UaInspector.Download.DatabasesTest do
   use ExUnit.Case, async: false
 
   import ExUnit.CaptureIO
@@ -8,7 +8,7 @@ defmodule Mix.UAInspector.Download.DatabasesTest do
     Mix.shell(Mix.Shell.IO)
 
     console = capture_io fn ->
-      Mix.UAInspector.Download.Databases.run([])
+      Mix.UaInspector.Download.Databases.run([])
 
       IO.write "n"
     end
@@ -21,7 +21,7 @@ defmodule Mix.UAInspector.Download.DatabasesTest do
     Mix.shell(Mix.Shell.IO)
 
     console = capture_io [capture_prompt: true], fn ->
-      Mix.UAInspector.Download.Databases.run([])
+      Mix.UaInspector.Download.Databases.run([])
     end
 
     assert String.contains?(console, "Really download? [Yn]")
@@ -36,16 +36,16 @@ defmodule Mix.UAInspector.Download.DatabasesTest do
 
     console = capture_io fn ->
       Application.put_env(:ua_inspector, :database_path, test_path)
-      Mix.UAInspector.Download.Databases.run(["--force"])
+      Mix.UaInspector.Download.Databases.run(["--force"])
       Application.put_env(:ua_inspector, :database_path, orig_path)
 
       databases = [
-        UAInspector.Database.Bots,
-        UAInspector.Database.BrowserEngines,
-        UAInspector.Database.Clients,
-        UAInspector.Database.Devices,
-        UAInspector.Database.OSs,
-        UAInspector.Database.VendorFragments
+        UaInspector.Database.Bots,
+        UaInspector.Database.BrowserEngines,
+        UaInspector.Database.Clients,
+        UaInspector.Database.Devices,
+        UaInspector.Database.OSs,
+        UaInspector.Database.VendorFragments
       ]
 
       for database <- databases do
@@ -73,7 +73,7 @@ defmodule Mix.UAInspector.Download.DatabasesTest do
       # capture regular output as well
       capture_io fn ->
         Application.put_env(:ua_inspector, :database_path, nil)
-        Mix.UAInspector.Download.Databases.run([])
+        Mix.UaInspector.Download.Databases.run([])
         Application.put_env(:ua_inspector, :database_path, orig_path)
       end
     end

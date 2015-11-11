@@ -1,4 +1,4 @@
-defmodule UAInspector.Result.Client do
+defmodule UaInspector.Result.Client do
   @moduledoc """
   Client result struct.
   """

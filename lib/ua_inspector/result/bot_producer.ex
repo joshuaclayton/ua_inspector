@@ -1,4 +1,4 @@
-defmodule UAInspector.Result.BotProducer do
+defmodule UaInspector.Result.BotProducer do
   @moduledoc """
   Bot producer result struct.
   """

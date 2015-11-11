@@ -56,50 +56,50 @@ The shown path is the default download path used by the mix task.
 ## Usage
 
 ```elixir
-iex(1)> UAInspector.parse("Mozilla/5.0 (iPad; CPU OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B554a Safari/9537.53")
-%UAInspector.Result{
+iex(1)> UaInspector.parse("Mozilla/5.0 (iPad; CPU OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B554a Safari/9537.53")
+%UaInspector.Result{
   user_agent: "Mozilla/5.0 (iPad; CPU OS 7_0_4 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11B554a Safari/9537.53"
-  client: %UAInspector.Result.Client{
+  client: %UaInspector.Result.Client{
     engine:  "WebKit",
     name:    "Mobile Safari",
     type:    "browser",
     version: "7.0"
   },
-  device: %UAInspector.Result.Device{
+  device: %UaInspector.Result.Device{
     brand: "Apple",
     model: "iPad",
     type:  "tablet"
   },
-  os: %UAInspector.Result.OS{
+  os: %UaInspector.Result.OS{
     name:     "iOS",
     platform: :unknown,
     version:  "7.0.4"
   },
 }
 
-iex(2)> UAInspector.parse("Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36")
-%UAInspector.Result.Bot{
+iex(2)> UaInspector.parse("Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36")
+%UaInspector.Result.Bot{
   user_agent: "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36",
   category:   "Search bot",
   name:       "Googlebot",
-  producer: %UAInspector.Result.BotProducer{
+  producer: %UaInspector.Result.BotProducer{
     name: "Google Inc.",
     url:  "http://www.google.com"
   },
   url: "http://www.google.com/bot.html"
 }
 
-iex(3)> UAInspector.parse("generic crawler agent")
-%UAInspector.Result.Bot{
+iex(3)> UaInspector.parse("generic crawler agent")
+%UaInspector.Result.Bot{
   user_agent: "generic crawler agent",
   name:       "Generic Bot"
 }
 
-iex(4)> UAInspector.parse("--- undetectable ---")
-%UAInspector.Result{
+iex(4)> UaInspector.parse("--- undetectable ---")
+%UaInspector.Result{
   user_agent: "--- undetectable ---",
   client:     :unknown,
-  device:     %UAInspector.Result.Device{ type: "desktop" },
+  device:     %UaInspector.Result.Device{ type: "desktop" },
   os:         :unknown
 }
 ```
@@ -109,29 +109,29 @@ The map key _user\_agent_ will hold the unmodified passed user agent.
 If the device type cannot be determined a "desktop" `:type` will be
 assumed (and returned). Both `:brand` and `:model` are set to `:unknown`.
 
-When a bot agent is detected the result with be a `UAInspector.Result.Bot`
-struct instead of `UAInspector.Result`.
+When a bot agent is detected the result with be a `UaInspector.Result.Bot`
+struct instead of `UaInspector.Result`.
 
 ### Convenience Methods
 
 To perform only a quick check if a user agents belongs to a bot:
 
 ```elixir
-iex(1)> UAInspector.bot? "generic crawler agent"
+iex(1)> UaInspector.bot? "generic crawler agent"
 true
 
-iex(2)> UAInspector.bot? "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36"
+iex(2)> UaInspector.bot? "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36"
 false
 ```
 
 To parse the client information for a user without checking for bots:
 
 ```elixir
-iex(1)> UAInspector.bot? "generic crawler agent"
-%UAInspector.Result{
+iex(1)> UaInspector.bot? "generic crawler agent"
+%UaInspector.Result{
   user_agent: "generic crawler agent"
   client:     :unknown,
-  device:     %UAInspector.Result.Device{},
+  device:     %UaInspector.Result.Device{},
   os:         :unknown
 }
 ```

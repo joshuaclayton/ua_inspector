@@ -1,7 +1,7 @@
-defmodule UAInspector.ShortCodeMap.DeviceBrandsTest do
+defmodule UaInspector.ShortCodeMap.DeviceBrandsTest do
   use ExUnit.Case, async: true
 
-  alias UAInspector.ShortCodeMap.DeviceBrands
+  alias UaInspector.ShortCodeMap.DeviceBrands
 
   test "device brand" do
     assert "Google" == DeviceBrands.to_long("GO")

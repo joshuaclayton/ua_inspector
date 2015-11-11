@@ -1,4 +1,4 @@
-defmodule UAInspector.Config do
+defmodule UaInspector.Config do
   @moduledoc """
   Utility module to simplify access to configuration values.
   """

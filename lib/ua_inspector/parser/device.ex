@@ -1,14 +1,14 @@
-defmodule UAInspector.Parser.Device do
+defmodule UaInspector.Parser.Device do
   @moduledoc """
-  UAInspector device information parser.
+  UaInspector device information parser.
   """
 
-  use UAInspector.Parser
+  use UaInspector.Parser
 
-  alias UAInspector.Database.Devices
-  alias UAInspector.Parser.VendorFragment
-  alias UAInspector.Result
-  alias UAInspector.Util
+  alias UaInspector.Database.Devices
+  alias UaInspector.Parser.VendorFragment
+  alias UaInspector.Result
+  alias UaInspector.Util
 
   @hbbtv          Util.build_regex("HbbTV/([1-9]{1}(\.[0-9]{1}){1,2})")
   @android_mobile Util.build_regex("Android; Mobile;")

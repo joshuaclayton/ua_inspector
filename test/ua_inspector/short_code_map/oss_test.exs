@@ -1,7 +1,7 @@
-defmodule UAInspector.ShortCodeMap.OSsTest do
+defmodule UaInspector.ShortCodeMap.OSsTest do
   use ExUnit.Case, async: true
 
-  alias UAInspector.ShortCodeMap.OSs
+  alias UaInspector.ShortCodeMap.OSs
 
   test "OS name" do
     assert "Fedora" == OSs.to_long("FED")

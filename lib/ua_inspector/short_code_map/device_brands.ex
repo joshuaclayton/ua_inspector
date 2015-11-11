@@ -1,9 +1,9 @@
-defmodule UAInspector.ShortCodeMap.DeviceBrands do
+defmodule UaInspector.ShortCodeMap.DeviceBrands do
   @moduledoc """
   Device Brand Short Code Map.
   """
 
-  use UAInspector.ShortCodeMap
+  use UaInspector.ShortCodeMap
 
   @remote_base "https://raw.githubusercontent.com/piwik/device-detector/master"
 
